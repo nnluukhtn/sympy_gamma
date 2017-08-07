@@ -23,7 +23,9 @@ urlpatterns = patterns(
 
     (r'card_info/(?P<card_name>\w*)$', 'app.views.get_card_info'),
 
-    (r'card_full/(?P<card_name>\w*)$', 'app.views.get_card_full')
+    (r'card_full/(?P<card_name>\w*)$', 'app.views.get_card_full'),
+
+    (r'^mathpix_keys', 'app.views.get_mathpix_keys')
 
 
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'

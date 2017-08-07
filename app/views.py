@@ -383,6 +383,13 @@ def remove_query(request, qid):
 
     return HttpResponse(json.dumps(response), mimetype='application/json')
 
+def get_mathpix_keys(request):
+    response = {
+        'app_id': os.environ.get('MATHPIX_APP_ID'),
+        'app_key': os.environ.get('MATHPIX_APP_KEY')
+    }
+    return HttpResponse(json.dumps(response), mimetype='application/json')
+
 @app_version
 def view_404(request):
     return ("404.html", {})
